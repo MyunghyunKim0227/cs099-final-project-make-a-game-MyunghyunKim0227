@@ -75,8 +75,12 @@ function draw()
     switch(gameProgress){
         case 0:
             image(openingScene, width / 2, height / 2, width, height);
+            push();
+            textAlign(CENTER);
+            textSize(20)
             fill(255);
-            text('v1.0.0-Beta', 920, 1010);//Version
+            text('Please press F11 before start', width / 2, 200);
+            pop();
             if(keyIsDown(32)){
                 backgroundMusic.loop(0, 1, volume);
                 openingSfx.play(0, 1, volume);
